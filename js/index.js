@@ -17,6 +17,8 @@ function isShowBadge(condition) {
   }
 }
 
+
+
 function init() {
 
 

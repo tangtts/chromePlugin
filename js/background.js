@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // 浏览器行为
   chrome.browserAction.setBadgeText({ text: 'today' });
   chrome.storage.sync.get({ lastTime: "" }, function (item) {
     if (item.lastTime == new Date().getDate()) {
@@ -27,7 +28,12 @@ chrome.contextMenus.onClicked.addListener(function (data) {
 // 监听 storage 的变化
 chrome.storage.onChanged.addListener(function (changes, storageName) {
 
-
   alert(changes.lastTime.newValue)
 
 })
+// 设置哪些窗口可以高亮,需要设置 权限 tabs
+// chrome.tabs.query({ currentWindow: true, url: "https://www.bilibili.com/" }, function (tabs) {
+//   chrome.pageAction.show(tabs[0].id)
+// })
+
+

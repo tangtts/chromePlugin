@@ -16,7 +16,11 @@
    "default_title":"大姨妈记录",
    "default_popup":"./index.html"
  },
-
+//  "page_action":{
+//   "default_icon":"img/6.png",
+//   "default_title":"大姨妈记录",
+//   "default_popup":"./index.html"
+// },
 
  "permissions": [
    "notifications",
