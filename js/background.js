@@ -32,8 +32,9 @@ chrome.storage.onChanged.addListener(function (changes, storageName) {
 
 })
 // 设置哪些窗口可以高亮,需要设置 权限 tabs
-// chrome.tabs.query({ currentWindow: true, url: "https://www.bilibili.com/" }, function (tabs) {
-//   chrome.pageAction.show(tabs[0].id)
-// })
+chrome.tabs.query({ currentWindow: true, url: "https://www.bilibili.com/" }, function (tabs) {
+  alert(tabs[0].id)
+  // chrome.pageAction.show(tabs[0].id)
+})
 
 

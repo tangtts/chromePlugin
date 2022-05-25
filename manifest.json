@@ -3,7 +3,7 @@
  "manifest_version":2,
  "name":"轩聪聪大姨妈记录",
  "version":"1.0",
- "description":"轩聪聪大姨妈记录",
+ "description":"轩聪聪大姨妈记录qi",
  "author":"唐硕坤", 
  "icons":{
    "16":"img/6.png",
@@ -11,8 +11,9 @@
    "128":"img/6.png"
  },
 
- "browser_action":{
-   "default_icon":"img/6.png",
+ 
+ "page_action":{
+  "default_icon":"img/6.png",
    "default_title":"大姨妈记录",
    "default_popup":"./index.html"
  },
@@ -24,13 +25,19 @@
    "declarativeContent",
   "tabs",
   "storage",
-  "http://*/*", 
-	"https://*/*"
+  "http://*.baidu.com/"
 ],
 "background":
 	{
-		"scripts": ["js/background.js"],
+		"scripts": ["js/page_action.js"],
     "persistent": false
 	},
+"content_scripts":[
+  {
+    "matches":["http://*.baidu.com/"],
+    "js":["js/content.js"]
+  }
+],
+
   "options_page":"option.html"
 }

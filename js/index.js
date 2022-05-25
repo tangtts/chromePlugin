@@ -8,13 +8,13 @@ chrome.storage.sync.get("lastTime", function (item) {
 })
 
 function isShowBadge(condition) {
-  if (condition != '' && condition == new Date().getDate()) {
-    chrome.browserAction.setBadgeText({ text: 'today' });
-    chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });
-  } else {
-    chrome.browserAction.setBadgeText({ text: '' });
-    chrome.browserAction.setBadgeBackgroundColor({ color: [255, 255, 255, 0] });
-  }
+  // if (condition != '' && condition == new Date().getDate()) {
+  //   chrome.browserAction.setBadgeText({ text: 'today' });
+  //   chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });
+  // } else {
+  //   chrome.browserAction.setBadgeText({ text: '' });
+  //   chrome.browserAction.setBadgeBackgroundColor({ color: [255, 255, 255, 0] });
+  // }
 }
 
 
